@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 
-navieBayes = pickle.load(open("Model/NavieBayes.pkl", "rb"))
+navieBayes = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
     return "Đây là tin thật" if model.predict([text]) == 0.0 else "Đây là tin giả"
