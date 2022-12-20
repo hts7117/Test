@@ -26,7 +26,8 @@ def main():
 
     options = st.selectbox(
          'Choose model:',
-         ['None', 'Navie Bayes', 'SVM Gausssian', 'SVM Liner', 'SVM Poly', 'SVM Sigmoid'])
+         ['None', 'Navie Bayes'])
+         #'SVM Gausssian', 'SVM Liner', 'SVM Poly', 'SVM Sigmoid'
 
     st.write('Options: ', options)
 
