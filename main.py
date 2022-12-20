@@ -1,11 +1,14 @@
 import streamlit as st
+import pickle
+
+
 
 def main():
     st.title("Fake news detection")
 
     options = st.selectbox(
          'Choose model:',
-         ['None', 'Logistic Regression', 'MLP Classifier', 'SVM with kernel RBF'])
+         ['None', 'Navie Bayes', 'SVM Gausssian', 'SVM Liner', 'SVM Poly', 'SVM Sigmoid'])
 
     st.write('Options: ', options)
 
