@@ -1,7 +1,7 @@
 import streamlit as st
-import pickle
+#import pickle
 
-navieBayes = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
+#navieBayes = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
     return "Đây là tin thật" if model.predict([text]) == 0.0 else "Đây là tin giả"
@@ -19,10 +19,10 @@ def main():
         raw_text = st.text_area("News")
         submit = st.form_submit_button(label='Submit')
 
-    if submit:
-        if options == 'Navie Bayes':
-            model = navieBayes
-            st.write(predict_from_raw(model, raw_text))
+    #if submit:
+        #if options == 'Navie Bayes':
+            #model = navieBayes
+            #st.write(predict_from_raw(model, raw_text))
 
 if __name__ == '__main__':
     main()
