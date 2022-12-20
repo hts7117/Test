@@ -1,6 +1,2 @@
-scikit-learn
-underthesea
-tensorflow
-regex
-numpy
+scikit-learn == 1.0.2
 pickle
