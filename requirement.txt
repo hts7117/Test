@@ -1,4 +1,6 @@
 scikit-learn
+underthesea
+tensorflow
+regex
 numpy
-pandas
 pickle
