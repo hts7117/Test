@@ -1,6 +1,18 @@
 import streamlit as st
 import pickle
 
+def process_text(s):
+
+    # Check string to see if they are a punctuation
+    nopunc = [char for char in s if char not in string.punctuation]
+
+    # Join the characters again to form the string.
+    nopunc = ''.join(nopunc)
+    
+    # Convert string to lowercase and remove stopwords
+    clean_string = [word for word in nopunc.split()]
+    return clean_string
+
 test = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
