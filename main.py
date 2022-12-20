@@ -15,10 +15,11 @@ def process_text(s):
     clean_string = [word for word in nopunc.split()]
     return clean_string
 
-test = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
+navieBayes = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
-    return "Đây là tin thật" if model.predict([text])[0] == True else "Đây là tin giả"
+    return model.predict([text])[0]
+    #return "Đây là tin thật" if model.predict([text])[0] == True else "Đây là tin giả"
 
 def main():
     st.title("Fake news detection")
@@ -35,7 +36,7 @@ def main():
 
     if submit:
         if options == 'Navie Bayes':
-            model = test
+            model = navieBayes
             st.write(predict_from_raw(model, raw_text))
 
 if __name__ == '__main__':
