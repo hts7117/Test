@@ -18,8 +18,8 @@ def process_text(s):
 navieBayes = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
-    return model.predict([text])[0]
-    #return "Đây là tin thật" if model.predict([text])[0] == True else "Đây là tin giả"
+    #return model.predict([text])[0]
+    return "Đây là tin thật" if model.predict([text])[0] == 'True' else "Đây là tin giả"
 
 def main():
     st.title("Fake news detection")
