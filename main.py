@@ -4,8 +4,9 @@ import string
 
 def process_text(s):
 
+    punctuation = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')','-', '_', '+', '=', '[', ']', '{', '}', '\\', ';', ':', '"', ',', '.', '<', '>','/','?']
     # Check string to see if they are a punctuation
-    nopunc = [char for char in s if char not in string.punctuation]
+    nopunc = [char for char in s if char not in punctuation]
 
     # Join the characters again to form the string.
     nopunc = ''.join(nopunc)
