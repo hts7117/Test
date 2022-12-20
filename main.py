@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import string
 
 def process_text(s):
 
@@ -16,7 +17,7 @@ def process_text(s):
 test = pickle.load(open('Model/NaiveBayes.pkl', 'rb'))
 
 def predict_from_raw(model, text):
-    return "Đây là tin thật" if model.predict([text]) == 0.0 else "Đây là tin giả"
+    return "Đây là tin thật" if model.predict([text])[0] == 0.0 else "Đây là tin giả"
 
 def main():
     st.title("Fake news detection")
