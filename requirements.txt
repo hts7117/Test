@@ -1,1 +1,4 @@
 scikit-learn
+string
+regex
+numpy
